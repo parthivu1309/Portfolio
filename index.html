@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parthiv — Builder, Thinker, CS Student</title>
+  <meta name="description"
+    content="Computer Engineering student with a habit of building things that don't exist yet. Competitive programmer, founder of Cric Intelligence, reader of uncomfortable books.">
+
+  <!-- OG tags for LinkedIn sharing -->
+  <meta property="og:title" content="Parthiv — Builder, Thinker, CS Student">
+  <meta property="og:description" content="I build things I haven't seen yet.">
+  <meta property="og:image" content="/og-image.png">
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <a href="#main" class="skip-link"
+    style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 10000;">Skip
+    to content</a>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="#about" class="drawer-link">About</a>
+    <a href="#projects" class="drawer-link">Projects</a>
+    <a href="#beyond-code" class="drawer-link">Thinking</a>
+    <a href="#cp" class="drawer-link">CP</a>
+    <a href="#contact" class="drawer-link">Contact</a>
+  </div>
+
+  <nav class="navbar" aria-label="Main navigation" id="navbar">
+    <div class="container">
+      <div class="nav-links">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#beyond-code" class="nav-item">Thinking</a>
+        <a href="#cp" class="nav-item">CP</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- HERO SECTION -->
+    <section class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-content reveal">
+            <span class="eyebrow">Computer Engineering · Founder · Builder of ideas</span>
+            <h1 class="hero-headline" data-text="Code. Think.&#10;Build. Repeat.">Code. <span
+                class="accent">Think.</span><br>Build. <span class="accent">Repeat.</span></h1>
+            <p class="hero-sub">I'm Parthiv — a second-year CS student who competes in algorithms by day, reads game
+              theory and Atomic Habits by night, and ships real products in between. Currently building Cric
+              Intelligence and figuring out how the world actually works.</p>
+
+            <div class="hero-ctas">
+              <a href="#projects" class="btn btn-primary">See My Work &rarr;</a>
+              <a href="#contact" class="btn btn-ghost">Contect Me</a>
+            </div>
+
+            <div class="trait-chips">
+              <span class="trait-chip">Innovator</span>
+              <span class="trait-chip">First-principles thinker</span>
+              <span class="trait-chip">Founder</span>
+              <span class="trait-chip">Competitive programmer</span>
+              <span class="trait-chip">2nd Year CSE</span>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrapper reveal" style="transition-delay: 100ms;">
+            <div class="hero-photo-ring">
+              <img src="Parthiv's Photo 1.jpg" alt="Parthiv — CS Student and Founder" class="hero-photo" width="220"
+                height="220" />
+            </div>
+
+            <a href="https://github.com/parthivu1309" target="_blank" rel="noopener" class="orbit-link orbit-github"
+              aria-label="GitHub profile">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://leetcode.com/u/parthiv_upadhyay" target="_blank" rel="noopener"
+              class="orbit-link orbit-leetcode" aria-label="LeetCode profile">
+              <span>LeetCode</span>
+            </a>
+
+            <a href="https://codeforces.com/profile/Parthiv_Upadhyay" target="_blank" rel="noopener"
+              class="orbit-link orbit-cf" aria-label="Codeforces profile">
+              <span>Codeforces</span>
+            </a>
+          </div>
+
+          <!-- Decorative Code Block -->
+          <div class="hero-code-bg reveal" style="transition-delay: 200ms;">
+            <pre><code><span class="code-comment">// Nash Equilibrium — Prisoner's Dilemma</span>
+<span class="code-keyword">const</span> payoff = {
+  (C, C): [-1, -1],
+  (C, D): [-3,  0],
+  (D, C): [ 0, -3],
+  (D, D): [-2, -2]
+};
+
+<span class="code-comment">// Neither player can unilaterally improve.</span>
+<span class="code-comment">// That's the equilibrium. That's the trap.</span>
+<span class="code-comment">// Understanding this changes how you see everything.</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about container reveal" aria-label="About me">
+      <div class="grid">
+        <div class="about-stats">
+          <div class="card stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Problems Solved</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Startup Founded</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Languages</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-number">2nd</div>
+            <div class="stat-label">Year CSE Student</div>
+          </div>
+        </div>
+
+        <div class="about-prose">
+          <h2>About me</h2>
+          <p class="text-muted">I'm a Computer Engineering student driven by building intelligent systems. My foundation
+            is rooted in rigorous problem-solving through competitive programming, which I apply to real-world
+            engineering challenges.</p>
+          <p class="text-muted">I don't just write code; I build products. My current focus is bridging the gap between
+            computer vision and sports analytics to make pro-level coaching accessible to everyone.</p>
+
+          <div class="about-currently">
+            <h3>Currently:</h3>
+            <ul>
+              <li>Building Cric Intelligence (MVP pose estimation pipeline)</li>
+              <li>Practicing DSA daily in C++</li>
+              <li>Learning and Practicing the concepts of Cybersecurity</li>
+              <li>Exploring Game Theory</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills container reveal" aria-label="Skills and technologies">
+      <h2>What I build with</h2>
+      <div class="skills-grid">
+        <div class="skill-category card">
+          <h3>Languages</h3>
+          <div class="skill-chips">
+            <span class="chip">C++</span>
+            <span class="chip">C</span>
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category card">
+          <h3>Frameworks & Tools</h3>
+          <div class="skill-chips">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Vs Code</span>
+            <span class="chip">Linux</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">Vercel</span>
+          </div>
+        </div>
+
+        <div class="skill-category card">
+          <h3>AI/ML</h3>
+          <div class="skill-chips">
+            <span class="chip">MediaPipe</span>
+            <span class="chip">OpenCV</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">LLM APIs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects container reveal" aria-label="Projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Featured Project -->
+        <div class="card project-card project-featured">
+          <span class="chip chip-amber">Founder · In Development</span>
+          <h3>Cric Intelligence</h3>
+          <p>AI batting coach using MediaPipe pose estimation. Compares your technique against pro cricketers providing
+            real-time angle analysis and actionable feedback.</p>
+
+          <div class="project-tech">
+            <span>Flutter</span> · <span>MediaPipe</span> · <span>TFLite</span> · <span>Firebase</span>
+          </div>
+
+          <div class="project-links">
+            <a href="Cric_Intelligence_Early_Access.docx" target="_blank" rel="noopener">Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Technical SVG Visualization for Cric Intelligence -->
+          <div class="project-featured-visual">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid background -->
+              <path d="M0 40H200M0 80H200M0 120H200M0 160H200M40 0V200M80 0V200M120 0V200M160 0V200"
+                stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+              <!-- Stick figure connections (white/blue) -->
+              <path d="M100 60 L100 110 L80 150 M100 110 L120 150 M100 75 L70 90 L60 120 M100 75 L130 90 L140 120"
+                stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M70 90 L85 110 L130 90" stroke="#f0883e" stroke-width="2" stroke-dasharray="4 4" opacity="0.6" />
+              <!-- Reference bat angle -->
+
+              <!-- Joints (white dots) -->
+              <circle cx="100" cy="40" r="10" fill="transparent" stroke="#e6edf3" stroke-width="2" /> <!-- Head -->
+              <circle cx="100" cy="60" r="4" fill="#e6edf3" /> <!-- Neck -->
+              <circle cx="100" cy="75" r="4" fill="#e6edf3" /> <!-- Shoulders -->
+              <circle cx="70" cy="90" r="4" fill="#e6edf3" /> <!-- Elbow L -->
+              <circle cx="130" cy="90" r="4" fill="#e6edf3" /> <!-- Elbow R -->
+              <circle cx="60" cy="120" r="4" fill="#e6edf3" /> <!-- Wrist L -->
+              <circle cx="140" cy="120" r="4" fill="#e6edf3" /> <!-- Wrist R -->
+              <circle cx="100" cy="110" r="4" fill="#e6edf3" /> <!-- Hip -->
+              <circle cx="80" cy="150" r="4" fill="#e6edf3" /> <!-- Knee L -->
+              <circle cx="120" cy="150" r="4" fill="#e6edf3" /> <!-- Knee R -->
+
+              <!-- Angle Annotations -->
+              <path d="M70 100 A10 10 0 0 1 80 90" stroke="#3fb950" stroke-width="2" fill="none" />
+              <text x="50" y="85" fill="#3fb950" font-family="monospace" font-size="8">87°</text>
+
+              <path d="M100 125 A15 15 0 0 1 115 110" stroke="#f85149" stroke-width="2" fill="none" />
+              <text x="125" y="105" fill="#f85149" font-family="monospace" font-size="8">142°</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Regular Project 1 -->
+        <div class="card project-card" style="border-left: 2px solid #8b5cf6;">
+          <span class="chip"
+            style="color: #8b5cf6; background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2);">Algorithms</span>
+          <h3>Chess Algorithm</h3>
+          <p>A chess engine that calculates optimal moves using minimax with alpha-beta pruning. Explores all legal
+            positions to a configurable depth and evaluates board states using a piece-value heuristic. Built to
+            understand how games are solved, not just played.</p>
+          <div class="project-tech">
+            <span>C++</span> · <span>Minimax</span> · <span>Alpha-Beta Pruning</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/parthivu1309" target="_blank" rel="noopener">GitHub &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Regular Project 2 -->
+        <div class="card project-card" style="border-left: 1px solid rgba(255,255,255,0.08);">
+          <span class="chip"
+            style="color: rgba(139, 148, 158, 0.8); background: rgba(139, 148, 158, 0.1); border-color: rgba(139, 148, 158, 0.2);">Fundamentals</span>
+          <h3>Tic Tac Toe — C Language</h3>
+          <p>Classic game implemented in pure C. No libraries, no frameworks — just arrays, loops, and terminal I/O. The
+            point wasn't the game. It was learning to think in memory and control flow before abstractions took over.
+          </p>
+          <div class="project-tech">
+            <span>C</span> · <span>Terminal</span> · <span>No dependencies</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/parthivu1309/My-dev/blob/main/c/Tic-Tac-Toe.c" target="_blank"
+              rel="noopener">GitHub &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BEYOND CODE SECTION -->
+    <section id="beyond-code" class="beyond-code container reveal" aria-label="Beyond code — how I think">
+      <span class="eyebrow" style="margin-bottom: var(--space-2);">The person behind the keyboard</span>
+      <h2>How I actually think, and What i do beyond Code</h2>
+      <p class="beyond-code-sub text-muted" style="max-width: 600px;">Building great software is 20% syntax and 80%
+        mental models. Here's what I'm feeding mine.</p>
+
+      <div class="grid-asym">
+        <!-- LEFT COLUMN: Books -->
+        <div class="beyond-code-left">
+          <h3>Current mental diet</h3>
+
+          <div class="book-card" style="--card-accent: #3fb950;">
+            <div class="book-badge" style="color: #3fb950;">[MENTAL MODELS]</div>
+            <h4>Atomic Habits — James Clear</h4>
+            <p>"It's not about goals. It's about systems. I restructured my DSA practice routine after reading this. 1%
+              better daily compounds into something unrecognizable in a year."</p>
+          </div>
+
+          <div class="book-card" style="--card-accent: #f0883e;">
+            <div class="book-badge" style="color: #f0883e;">[STRATEGY & POWER]</div>
+            <h4>The 48 Laws of Power — Robert Greene</h4>
+            <p>"Uncomfortable truths about how influence actually works. I read this not to manipulate — but to
+              recognize patterns in competition, negotiation, and building teams. Knowing the game doesn't mean playing
+              it dirty."</p>
+          </div>
+
+          <div class="book-card" style="--card-accent: #58a6ff;">
+            <div class="book-badge" style="color: #58a6ff;">[MATHEMATICS]</div>
+            <h4>Game Theory — Nash Equilibria, Prisoner's Dilemmas, Signaling Theory, Bargaining Models</h4>
+            <p>"Actively studying this. It reframes everything from competitive programming to startup decisions as
+              multi-player optimization problems. I want the mathematical foundation, not just the Wikipedia summary."
+            </p>
+          </div>
+
+          <div class="book-card" style="--card-accent: #8b5cf6;">
+            <div class="book-badge" style="color: #8b5cf6;">[SYSTEMS THINKING]</div>
+            <h4>The Lean Startup + First-Principles Thinking</h4>
+            <p>"Building Cric Intelligence taught me more about product thinking than any course could. Validate before
+              building. Question every assumption. Don't fall in love with your solution."</p>
+          </div>
+
+          <div class="book-card" style="--card-accent: rgba(255,255,255,0.15);">
+            <div class="book-badge" style="color: rgba(255,255,255,0.5);">[CURRENTLY EXPLORING]</div>
+            <h4>Mathematical Models in Social Sciences, Mechanism Design, Information Asymmetry</h4>
+            <p>"The gap between a smart person and a great decision-maker is usually the quality of their models.
+              Building mine."</p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Principles -->
+        <div class="beyond-code-right">
+          <h3>First principles I live by</h3>
+
+          <div class="operating-principle">
+            <div class="op-number">01</div>
+            <div class="op-content">
+              <h4>Build to understand</h4>
+              <p>If I want to understand something deeply, I build something with it. Reading about pose estimation
+                taught me nothing. Implementing it taught me everything.</p>
+            </div>
+          </div>
+
+          <div class="operating-principle">
+            <div class="op-number">02</div>
+            <div class="op-content">
+              <h4>Innovate in the question, not the answer</h4>
+              <p>Most people copy solutions. I try to find better problems. Cric Intelligence started as "why can't I
+                get coaching feedback at 2am?"</p>
+            </div>
+          </div>
+
+          <div class="operating-principle">
+            <div class="op-number">03</div>
+            <div class="op-content">
+              <h4>Earn the shortcut</h4>
+              <p>I don't take shortcuts I haven't earned. In CP, I solve brute force first. In life, I read the primary
+                source before the summary.</p>
+            </div>
+          </div>
+
+          <div class="operating-principle">
+            <div class="op-number">04</div>
+            <div class="op-content">
+              <h4>Think in systems, not events</h4>
+              <p>A bad submission in a contest is an event. The reasoning pattern that caused it is a system. Fix the
+                system.</p>
+            </div>
+          </div>
+
+          <div class="operating-principle" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <div class="op-number">05</div>
+            <div class="op-content">
+              <h4>Stay uncomfortably curious</h4>
+              <p>Game theory, cricket physics, habit formation, ancient power dynamics — I follow curiosity wherever it
+                goes, even when it seems unrelated. The connections always show up later.</p>
+            </div>
+          </div>
+
+          <div class="founder-callout">
+            <div class="founder-callout-quote">"At 18, instead of waiting to be qualified, I started building."</div>
+            <p class="founder-callout-body">Cric Intelligence is my proof that the best way to learn computer vision,
+              product design, and business at once is to need them all simultaneously.</p>
+            <a href="#" class="founder-callout-link">&rarr; Learn about Cric Intelligence</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITIVE PROGRAMMING SECTION -->
+    <section id="cp" class="cp container reveal" aria-label="Competitive Programming">
+      <div class="cp-terminal">
+        <div class="cp-header">
+          <h2>Competitive Programming</h2>
+          <code>~/stats</code>
+        </div>
+
+        <div class="cp-stats">
+          <div class="cp-stat-card">
+            <div class="cp-stat-pupil">NewBie</div>
+            <div class="cp-stat-label">Codeforces Rank</div>
+            <div style="font-size: 13px; color: var(--color-text-secondary); margin-top: 4px;">677 rating
+            </div>
+          </div>
+          <div class="cp-stat-card">
+            <div class="cp-stat-value">500+</div>
+            <div class="cp-stat-label">Problems Solved<br>(across all platforms)</div>
+          </div>
+          <div class="cp-stat-card">
+            <div class="cp-stat-value">10+</div>
+            <div class="cp-stat-label">Contests Participated</div>
+          </div>
+        </div>
+
+        <div class="cp-heatmap-container">
+          <div class="cp-heatmap" id="heatmapGrid">
+            <!-- Grid will be populated by JS for cleaner HTML -->
+          </div>
+        </div>
+
+        <div class="cp-categories">
+          <span class="chip">Greedy</span>
+          <span class="chip">DP</span>
+          <span class="chip">Binary Search</span>
+          <span class="chip">Brute Force</span>
+          <span class="chip">Sorting</span>
+        </div>
+
+        <p class="cp-quote">"Solving problems daily. C++ is my weapon."</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact container reveal" aria-label="Contact">
+      <h2>Let's build something.</h2>
+      <p class="contact-sub">Open to internships, collaborations, and early users for Cric Intelligence.</p>
+
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+
+      <div class="contact-socials">
+        <a href="https://github.com/parthivu1309" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/parthiv-upadhyay-4936ba370" target="_blank" rel="noopener"
+          aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://x.com/parthivu1309" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+            </path>
+          </svg>
+        </a>
+      </div>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-173xcHI2Qqoy1tDM_EY0rtdfPrgFRo-1zgbWARvtyMNetw/viewform?usp=publish-editor"
+        class="cric-cta">Interested in Cric Intelligence? Register early access →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-left">
+          <strong>Parthiv_Upadhyay</strong>
+          <p>Built with constant curiosity and learning</p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/parthivu1309" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/parthiv-upadhyay-4936ba370" target="_blank" rel="noopener"
+            aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://x.com/parthivu1309" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-quote">"The map is not my territory."</div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="background.js"></script>
+  <script src="main.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAA7ebNT9dIZL7HAsTwqzne5YFx3L4jJgM",
+      authDomain: "portfolio-c4c99.firebaseapp.com",
+      projectId: "portfolio-c4c99",
+      storageBucket: "portfolio-c4c99.firebasestorage.app",
+      messagingSenderId: "542504004550",
+      appId: "1:542504004550:web:1dcf7eeecda12dd45420c7",
+      measurementId: "G-STCMNTB77N"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        try {
+          await addDoc(collection(db, "contacts"), {
+            name: name,
+            email: email,
+            message: message,
+            timestamp: new Date()
+          });
+          formStatus.textContent = 'Message sent successfully!';
+          formStatus.classList.add('success');
+          contactForm.reset();
+        } catch (error) {
+          console.error("Error adding document: ", error);
+          formStatus.textContent = 'Failed: ' + error.message;
+          formStatus.classList.add('error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
